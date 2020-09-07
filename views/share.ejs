@@ -1,0 +1,24 @@
+<span class="title">Dogstargram</span>
+
+
+
+
+
+
+
+
+
+
+
+
+<% for(let i = 0; i < result.length; i++){ %>
+
+        
+        <img src = "<%= result[i].url %>" width="250" height="250"  style= " display:block"/> name: <%= result[i].name %> date : <%= result[i].date %>
+
+<% } %>
+<p>
+    <a href="/home/"><button>Back</button></a>
+    <input type="button" class="btn" onclick=" location.href='/logout'" value="Log out"/>
+</p>
+    

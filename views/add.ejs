@@ -1,0 +1,18 @@
+<span class="title">Dogstargram</span>
+
+
+
+
+
+<form action="/home/<%= post._id %>?_method=put" method="post">
+
+    <label for="name">Name:</label>
+    <input name="name" type="text" required />
+    <label for="url">Image Url:</label>
+    <input name="url" type="text" required />
+    <label for="date">date(ex 2020-04-12):</label>
+    <input type="date" name="date">
+    <button class="btn">Upload URL</button>
+    
+  </form>
+  <a href="/home/<%= post._id %>"><button>Back</button></a>

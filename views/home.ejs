@@ -1,0 +1,33 @@
+<img src = "https://cdn.dribbble.com/users/281280/screenshots/6508914/shibbabbig.png"  width="200" height="100"  style= " display:block"/>
+<span class="title">Dogstargram</span>
+
+<div>
+    <form method="GET" action="/home">
+        <div style="text-align: center;">
+            <label for="name">Album name:</label>
+            <input type="name" name="name">
+            <label for="date">date(ex 2020-04-12):</label>
+            <input type="date" name="date">
+            <input type="submit" value= "Filter">
+            <input type="button" class="btn" onclick=" location.href='/createalbum'" value="Add album"/>
+            <input type="button" class="btn" onclick=" location.href='/logout'" value="Log out"/>
+            <input type="button" class="btn" onclick=" location.href='/others'" value="Look Other user's photo"/>
+        </div>
+            
+    </form>
+
+
+
+</div>
+
+
+
+
+
+
+<% for(var i = 0; i < data.length; i++){ %>
+    <li>
+        <a href="/home/<%= data[i]._id %>">Album name: <%= data[i].name %> Date:<%= data[i].date %> Share(Yes Or empty) :<%= data[i].share %></a>
+    </li>
+
+<% } %>
